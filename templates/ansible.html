@@ -1,0 +1,104 @@
+{% extends "base2.html" %}
+
+{% block content %}
+    <script type="text/javascript" charset="utf-8">
+		function output(input){
+			document.body.appendChild(document.createElement('pre')).innerHTML = input;
+		}
+
+		function highLight(json){
+			 json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+			  return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+				     var cls = 'number';
+				     if (/^"/.test(match)) {
+				         if (/:$/.test(match)) {
+				             cls = 'key';
+				         } else {
+				             cls = 'string';
+				         }
+				     } else if (/true|false/.test(match)) {
+				         cls = 'boolean';
+				     } else if (/null/.test(match)) {
+				         cls = 'null';
+				     }
+				     return '<span class="' + cls + '">' + match + '</span>';
+				 });
+		}
+
+
+		var str = JSON.stringify(person, undefined, 4);
+
+		output(highLight(str));
+
+</script>
+
+    <h1>Ansible Controller </h1>
+    <form action="/search-post" method="post">
+        {% csrf_token %}
+        <select name="host">
+<option value="all">all</option>
+<option value="192.168.79.132">192.168.79.132</option>
+<option value="192.168.79.131">192.168.79.131</option>
+</select>
+        <input type="text" name="module" value="module">
+        <input type="text" name="args" value="args">
+        <input type="submit" value="Excute">
+    </form>
+
+    <p>host: {{ rlt }} module: {{ module }} args: {{ args }}</p>
+<h2>Output is: </h2>
+<pre id="outjson"></pre>
+
+<script>
+
+var outstr = "";
+
+
+
+   var jsonobj = {{ out|safe }};
+  outstr = JSON.stringify(jsonobj, undefined, 4);
+
+
+
+
+document.getElementById('outjson').innerHTML = highLight(outstr);
+
+</script>
+
+    {% if output %}
+<table class="layui-table">
+    <colgroup>
+      <col width="150">
+      <col width="150">
+      <col width="200">
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>host</th>
+        <th>module</th>
+        <th>args</th>
+        <th>output</th>
+      </tr>
+    <tbody>
+    </thead>
+      {% for book in output %}
+      <tr>
+        <td>{{ book.host }}</td>
+        <td>{{ book.module }}</td>
+        <td>{{ book.args }}</td>
+        <td>not aviliable</td>
+      </tr>
+
+      {% endfor %}
+</tbody>
+ </table>
+
+    </ul>
+    {% else %}
+      <p>There are no books in the library.</p>
+    {% endif %}
+
+
+
+{% endblock %}
