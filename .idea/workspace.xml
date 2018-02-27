@@ -204,7 +204,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,6 +252,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,9 +556,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="2" width="1934" height="1036" extended-state="1" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1895811" sideWeight="0.47802198" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19226637" sideWeight="0.47802198" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5021436" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1013,6 +1013,6 @@
     </entry>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAsAVN0Fh/V3fKzJP4ITwICtB23MRZq8ixDHiHomqQ5CW70wT+VDlEQRorzNutp4CYXpS0rAydyoKKYnl42esVYFLtPkI3bDQVorkLOv8D33H7QpvJBgqUu4oEMm13Aeede+Unpd4TE4xPBLC3VxynekwJ4veiCo4Axv+mRe/5qeA/cvTRQfZSxgmLBz+NR4z2o0B0nygJPTrLp2ILFo425Y+jw2GFQQoL9Js+3d7RZfIX8x6KfWqHrsvIDlKx2DKzXg==</data>
+    <data>AAAAsLc4iyFMaLaqcC5cI51vl8Bk8oF2NISKAMVwqwj8b/C6l+ISGXnLMXnTQ4th+pu2qgrwMMVKPtkE23EtU3G6CEDUJCPJR9ki86wwQf1FlGY6ncsyk0WqE+ac2AVMRULK7CoPYvOWlPm1eIkyI4lthIJjQk+xK+A/Tlz/6RWEdfKVCfkBWw5kAH9jP8EGno4lZXySxwIpWx5Gm9BzegfoPJEt8LGc0WGi76FUoIRa4n0AkM+qCOo3D/y2DJNl9dIIGw==</data>
   </component>
 </project>
